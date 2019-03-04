@@ -63,10 +63,8 @@ var app = angular.module('App', ['ngRoute']);
 
      app.directive('pane',function(){
         return {
-            transclude:true,
-            scope :{title:'@'},
-            template:  '<div style="border: 1px solid black;">'
-                       + '<ng-transclude></ng-transclude>'
-                       + '</div>'
+            transclude : true,
+            scope : {title:'@'},
+            templateUrl : "template/box.html"  
         };
     });
