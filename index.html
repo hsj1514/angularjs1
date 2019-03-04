@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.7/angular-route.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+  </head>
+
+  <body>
+
+    <div ng-controller="MainCtrl">
+        <ul ng-repeat="student in students">
+            <li>
+                {{student.name}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li class="event_li"><a class="event_a" href="#!NewEvent"> Add New Event</a></li>     
+            <li class="event_li"><a class="event_a" href="#!DisplayEvent"> Display Event</a></li>
+        </ul>
+        <div ng-view></div>
+    </div>
+
+  </body>
+
+</html>
+
+
