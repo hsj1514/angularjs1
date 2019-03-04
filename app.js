@@ -55,7 +55,18 @@ var app = angular.module('App', ['ngRoute']);
     });
 
 
-    app.controller("DemoController",function($scope){
+    app.controller("FilterCtrl",function($scope){
 
         $scope.developer ="seungju";
      });
+
+
+     app.directive('pane',function(){
+        return {
+            transclude:true,
+            scope :{title:'@'},
+            template:  '<div style="border: 1px solid black;">'
+                       + '<ng-transclude></ng-transclude>'
+                       + '</div>'
+        };
+    });
