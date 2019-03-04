@@ -3,16 +3,16 @@ var app = angular.module('App', ['ngRoute']);
 
     app.config(function($routeProvider){
         $routeProvider
-        .when("/NewEvent",{
-            templateUrl : "template/add_event.html",
-            controller: "AddEventController"
+        .when("/Page1", {
+            templateUrl : "template/page1.html",
+            controller: "Page1Controller"
         })
-        .when("/DisplayEvent", {
-            templateUrl: "template/show_event.html",
-            controller: "ShowDisplayController"
+        .when("/Page2", {
+            templateUrl: "template/page2.html",
+            controller: "Page2Controller"
         })
         .otherwise ({
-            redirectTo: '/DisplayEvent'
+            redirectTo: '/Page1'
         });
     });
 
@@ -25,13 +25,13 @@ var app = angular.module('App', ['ngRoute']);
     });
 
 
-    app.controller("AddEventController", function($scope) {
-        $scope.message = "This is to Add a new Event";
+    app.controller("Page1Controller", function($scope) {
+        $scope.message = "첫 번째 페이지입니다.";
     });
     
 
-    app.controller("ShowDisplayController",function($scope){
-        $scope.message = "This is display an Event";
+    app.controller("Page2Controller",function($scope){
+        $scope.message = "두 번째 페이지입니다.";
     });
 
 
