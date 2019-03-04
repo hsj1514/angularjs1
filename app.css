@@ -1,8 +1,7 @@
 .event_a {
     color : skyblue;
     font-size : 20px;
-    text-decoration : none;
-    
+    text-decoration : none; 
 }
 
 
@@ -13,4 +12,9 @@
 
 .event_li {
     list-style-type : none;
+}
+
+
+.subject {
+    color : #7c7979;
 }

@@ -12,14 +12,18 @@
 
   <body>
 
-    <div ng-controller="MainCtrl">
+    <h1 class="subject">"ng-repeat example"</h1>
+    <div ng-controller="ListMaker">
         <ul ng-repeat="student in students">
             <li>
                 {{student.name}}
             </li>
         </ul>
     </div>
+    ........................................................................................................
 
+
+    <h1 class="subject">"Route example"</h1>
     <div class="container">
         <ul>
             <li class="event_li"><a class="event_a" href="#!NewEvent"> Add New Event</a></li>     
@@ -27,6 +31,35 @@
         </ul>
         <div ng-view></div>
     </div>
+    ........................................................................................................
+
+
+    <h1 class="subject">"ng-init example"</h1>
+    <div ng-init="margin=2 ; profit=3">
+        {{margin * profit}}
+    </div>
+
+
+    <div ng-controller="ValueIndicator">
+        {{value}}
+    </div>
+    ........................................................................................................
+
+
+    <h1 class="subject">"filter example"</h1>
+    <div ng-controller="FilterRoundOff">
+        원래 숫자 : {{pi}}
+        <br>
+        소수 2째자리 반올림한 숫자 : {{pi | number : 2}}
+    </div>
+
+    <br>
+    
+    <div ng-controller="DemoController">
+        {{developer | CustomFilter}}
+    </div>
+    ........................................................................................................
+
 
   </body>
 
