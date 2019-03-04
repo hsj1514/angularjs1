@@ -59,9 +59,3 @@ var app = angular.module('App', ['ngRoute']);
 
         $scope.developer ="seungju";
      });
-
-
-
-
-
-    
