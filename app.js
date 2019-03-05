@@ -61,10 +61,27 @@ var app = angular.module('App', ['ngRoute']);
      });
 
 
-     app.directive('pane',function(){
+    app.directive('pane',function(){
         return {
             transclude : true,
             scope : {title:'@'},
             templateUrl : "template/box.html"  
         };
+    });
+
+
+    
+    app.controller('dataList', function($scope) {
+
+      $scope.items = [
+          {'title' : 'What is Directive?',
+           'content' : '특정한 행위의 기능을 가진 DOM엘리먼트.'},
+
+          {'title' : 'Custom Directive',
+           'content' : '디렉티브를 직접 생성해보십시오.'},
+
+          {'title' : 'Bye~',
+           'content' : '디렉티브 이야기를 마치겠습니다.'}
+      ]
+
     });
